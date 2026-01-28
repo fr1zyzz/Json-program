@@ -1,10 +1,10 @@
-using System.Net;
 using System.Text.Json;
 using UserDate;
 
+
 namespace Managmant
 {
-    class ApplicationManagment
+    public class ApplicationManagment
     {
         int id;
         DateTime ApplicationDate = DateTime.Now;

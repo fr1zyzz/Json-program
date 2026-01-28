@@ -1,11 +1,17 @@
 ﻿using Managmant;
-using SecondFunction;
+using SecondFunction; 
+
 
 namespace MainMenu
 {
-    class Menu
+    class Program
     {
-        static void Main()
+        static void Main(string[] args)
+        {
+            Show();
+        }
+
+        public static void Show()
         {
             List<UserDate.Application> AllUsers = new List<UserDate.Application>();
             Console.Write("1. Добавить новую заявку \n2. Показать все заявки \n3. Найти заявку по компании \n4. Изменить статус заявки \n5. Удалить заявку \n6. Сохранить и выйти \n0. Завершить программу \nВы ввели: ");
@@ -51,7 +57,6 @@ namespace MainMenu
                 Console.WriteLine("Вы ввели неверное значение.");
                 return;
             }
-                
         }
     }
 }

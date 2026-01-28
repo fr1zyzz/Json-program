@@ -1,10 +1,7 @@
-using System.Text.Json;
-using UserDate;
-using Managmant;
 namespace SecondFunction
 
 {
-    class ShowAllList
+    public class ShowAllList
     {
         public void ShowAllLists()
         {
@@ -12,9 +9,12 @@ namespace SecondFunction
             if (!File.Exists(path) || new FileInfo(path).Length == 0)
             {
                 Console.WriteLine("Список является пустым.");
+                return;
             }
-                string json = File.ReadAllText(path);
-                Console.WriteLine($"Вот полный список: \n{json}");
+
+            string json = File.ReadAllText(path);
+            Console.WriteLine($"Вот полный список: \n{json}");
+            
         }
     }
 }
