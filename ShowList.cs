@@ -9,15 +9,12 @@ namespace SecondFunction
         public void ShowAllLists()
         {
             string path = Path.Combine(AppContext.BaseDirectory, "users.json");
-            string json = File.ReadAllText(path);
             if (!File.Exists(path) || new FileInfo(path).Length == 0)
             {
                 Console.WriteLine("Список является пустым.");
             }
-            else
-            {
+                string json = File.ReadAllText(path);
                 Console.WriteLine($"Вот полный список: \n{json}");
-            }
         }
     }
 }

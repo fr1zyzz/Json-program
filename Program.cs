@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Contracts;
-using Managmant;
+﻿using Managmant;
 using SecondFunction;
 
 namespace MainMenu
@@ -17,12 +16,10 @@ namespace MainMenu
                     switch (abeme)
                     {
                         case 1: 
-                        // Console.WriteLine("Вы выбрали пункт 1.");
                         ApplicationManagment manager = new ApplicationManagment();
                         manager.DoUWantCreateNewUser();
                         break;
                         case 2: 
-
                         ShowAllList Show = new ShowAllList();
                         Show.ShowAllLists();
                         break;
@@ -46,13 +43,13 @@ namespace MainMenu
                 else
                 {
                     Console.WriteLine("Вы ввели значение выше/ниже доступного.");
-                    Main();
+                    return;
                 }
             }
             else
             {
                 Console.WriteLine("Вы ввели неверное значение.");
-                Main();
+                return;
             }
                 
         }

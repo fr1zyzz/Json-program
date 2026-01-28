@@ -1,5 +1,5 @@
 namespace UserDate{
-    class Application
+    public class Application
     {
         public int Id { get; set; }
         public string CompanyName { get; set; }
@@ -19,7 +19,7 @@ namespace UserDate{
         }
     }
 
-    enum ApplicationStatus
+    public enum ApplicationStatus
     {
         Sent,
         Invited,
