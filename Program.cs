@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.Contracts;
 using Managmant;
+using SecondFunction;
 
 namespace MainMenu
 {
@@ -16,12 +17,14 @@ namespace MainMenu
                     switch (abeme)
                     {
                         case 1: 
-                        Console.WriteLine("Вы выбрали пункт 1.");
+                        // Console.WriteLine("Вы выбрали пункт 1.");
                         ApplicationManagment manager = new ApplicationManagment();
                         manager.DoUWantCreateNewUser();
                         break;
                         case 2: 
-                        Console.WriteLine("Вы выбрали пункт 2.");
+
+                        ShowAllList Show = new ShowAllList();
+                        Show.ShowAllLists();
                         break;
                         case 3: 
                         Console.WriteLine("Вы выбрали пункт 3.");
