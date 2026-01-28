@@ -1,0 +1,14 @@
+D:\Programming\project für Ausbildung\bin\Debug\net10.0\project für Ausbildung.exe
+D:\Programming\project für Ausbildung\bin\Debug\net10.0\project für Ausbildung.deps.json
+D:\Programming\project für Ausbildung\bin\Debug\net10.0\project für Ausbildung.runtimeconfig.json
+D:\Programming\project für Ausbildung\bin\Debug\net10.0\project für Ausbildung.dll
+D:\Programming\project für Ausbildung\bin\Debug\net10.0\project für Ausbildung.pdb
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.AssemblyInfoInputs.cache
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.AssemblyInfo.cs
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.csproj.CoreCompileInputs.cache
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.dll
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\refint\project für Ausbildung.dll
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.pdb
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\project für Ausbildung.genruntimeconfig.cache
+D:\Programming\project für Ausbildung\obj\Debug\net10.0\ref\project für Ausbildung.dll
