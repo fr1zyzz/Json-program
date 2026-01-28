@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 4,
+    "CompanyName": "Netto",
+    "Position": "Azubi",
+    "ApplicationDate": "2026-01-28T08:31:05.7064126+01:00",
+    "Status": 0,
+    "Notes": "Ich suche eine Arbeit im IT-Bereich"
+  },
+  {
+    "Id": 5,
+    "CompanyName": "AOK",
+    "Position": "Praktikum",
+    "ApplicationDate": "2026-01-28T08:36:29.1997675+01:00",
+    "Status": 0,
+    "Notes": "ich suche eine Ausbildung"
+  }
+]

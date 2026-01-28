@@ -8,41 +8,38 @@ namespace Managmant
     {
         int id;
         DateTime ApplicationDate = DateTime.Now;
-        List<Application> allUsers;
+        List<Application>? allUsers;
         public void DoUWantCreateNewUser()
         {
-            string CompanyName;
-            string Position;
             ApplicationStatus Status = ApplicationStatus.Sent;
-            string Notes;
-            Console.Write("Действительно ли вы хотите создать новую заявку? ");
-            Console.Write("Введите имя вашей компании: ");
-            CompanyName = Console.ReadLine();
-            if (CompanyName == null)
+            Console.Write("Чтобы начать заполнение заявки введите имя компании в которой вы работаете: ");
+            string? CompanyName = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(CompanyName))
             {
                 Console.Write("Вы ввели неправильное значение");
                 return;
             }
             Console.Write("Напишите позицию на которой вы работаете: ");
-            Position = Console.ReadLine();
-            if (Position == null)
+            string? Position = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(Position))
             {
                 Console.Write("Вы ввели неправильное значение");
                 return;
             }
             Console.Write("Напишите информацию, которую вы хотите, чтобы мы обработали: ");
-            Notes = Console.ReadLine();
-            if (Notes == null)
+            string? Notes = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(Notes))
             {
                 Console.Write("Вы ввели неправильное значение");
                 return;
             }
 
 
-            CreateNewUser(id, CompanyName, Position, Status, Notes);
+            CreateNewUser(CompanyName, Position, Status, Notes);
         }
-        public void CreateNewUser(int id, string CompanyName, string Position, ApplicationStatus Status, string Notes)
+        public void CreateNewUser(string CompanyName, string Position, ApplicationStatus Status, string Notes)
         {
+            int res = 0;
             string path = Path.Combine(AppContext.BaseDirectory, "users.json");
             if (!File.Exists(path) || new FileInfo(path).Length == 0)
             {
@@ -60,8 +57,16 @@ namespace Managmant
             }
             else
             {
-                id = allUsers.Count + 1;
+                for(int i = 0; i < allUsers.Count; i++)
+                {
+                    if(allUsers[i].Id > res)
+                    {
+                        res = allUsers[i].Id;
+                    }
+                }
             }
+
+            id = res + 1;
 
             Application newuser = new Application(id, CompanyName, Position, ApplicationDate, Status, Notes);
             allUsers?.Add(newuser);
