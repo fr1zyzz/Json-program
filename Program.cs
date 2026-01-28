@@ -49,13 +49,13 @@ namespace MainMenu
                 else
                 {
                     Console.WriteLine("Вы ввели значение выше/ниже доступного.");
-                    return;
+                    Show();
                 }
             }
             else
             {
                 Console.WriteLine("Вы ввели неверное значение.");
-                return;
+                Show();
             }
         }
     }
