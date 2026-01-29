@@ -24,7 +24,7 @@ namespace Managmant
         }
 
         // метод для сохранения списка обратно в JSON
-        private void SaveToJson()
+        public void SaveToJson()
         {
             string json = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
             {
@@ -84,13 +84,6 @@ namespace Managmant
 
             Application newuser = new Application(id, CompanyName, Position, ApplicationDate, Status, Notes);
             allUsers?.Add(newuser);
-
-            // string newJson = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
-            // {
-            //     WriteIndented = true
-            // });
-
-            // File.WriteAllText(path, newJson);
             SaveToJson();
             Console.WriteLine("Заявка успешно добавлена.");
             return;

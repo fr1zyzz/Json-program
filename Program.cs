@@ -1,6 +1,8 @@
 ﻿using Managmant;
 using SecondFunction; 
 using Searching;
+using Applicationstatus;
+using System.Runtime.InteropServices.Marshalling;
 
 namespace MainMenu
 {
@@ -34,7 +36,8 @@ namespace MainMenu
                         ser.Search();
                         break;
                         case 4: 
-                        Console.WriteLine("Вы выбрали пункт 4.");
+                        Changing status = new Changing();
+                        status.ChangeIt();
                         break;
                         case 5: 
                         Console.WriteLine("Вы выбрали пункт 5.");

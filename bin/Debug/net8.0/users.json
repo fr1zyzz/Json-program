@@ -1,6 +1,6 @@
 [
   {
-    "Id": 4,
+    "Id": 1,
     "CompanyName": "Netto",
     "Position": "Azubi",
     "ApplicationDate": "2026-01-28T08:31:05.7064126+01:00",
@@ -8,19 +8,35 @@
     "Notes": "Ich suche eine Arbeit im IT-Bereich"
   },
   {
-    "Id": 5,
+    "Id": 2,
     "CompanyName": "AOK",
     "Position": "Praktikum",
     "ApplicationDate": "2026-01-28T08:36:29.1997675+01:00",
-    "Status": 0,
+    "Status": 3,
     "Notes": "ich suche eine Ausbildung"
   },
   {
-    "Id": 6,
+    "Id": 3,
     "CompanyName": "Lidl",
     "Position": "Verkaufer",
     "ApplicationDate": "2026-01-29T10:17:34.170119+01:00",
     "Status": 0,
+    "Notes": "Keine"
+  },
+  {
+    "Id": 4,
+    "CompanyName": "Penny",
+    "Position": "Verkaufer",
+    "ApplicationDate": "2026-01-29T17:08:21.5299112+01:00",
+    "Status": 0,
+    "Notes": "Keine"
+  },
+  {
+    "Id": 5,
+    "CompanyName": "Aoka",
+    "Position": "Fachinformaticker",
+    "ApplicationDate": "2026-01-30T00:14:19.8995685+01:00",
+    "Status": 2,
     "Notes": "Keine"
   }
 ]
