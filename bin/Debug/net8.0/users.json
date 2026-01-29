@@ -14,5 +14,13 @@
     "ApplicationDate": "2026-01-28T08:36:29.1997675+01:00",
     "Status": 0,
     "Notes": "ich suche eine Ausbildung"
+  },
+  {
+    "Id": 6,
+    "CompanyName": "Lidl",
+    "Position": "Verkaufer",
+    "ApplicationDate": "2026-01-29T10:17:34.170119+01:00",
+    "Status": 0,
+    "Notes": "Keine"
   }
 ]

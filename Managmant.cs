@@ -8,7 +8,30 @@ namespace Managmant
     {
         int id;
         DateTime ApplicationDate = DateTime.Now;
-        List<Application>? allUsers;
+        public List<Application>? allUsers;
+        string path = Path.Combine(AppContext.BaseDirectory, "users.json");
+
+        public void LoadFromJson()
+        {
+            if (!File.Exists(path) || new FileInfo(path).Length == 0)
+            {
+                allUsers = new List<Application>();
+                return;
+            }
+
+            string json = File.ReadAllText(path);
+            allUsers = JsonSerializer.Deserialize<List<Application>>(json) ?? new List<Application>();
+        }
+
+        // метод для сохранения списка обратно в JSON
+        private void SaveToJson()
+        {
+            string json = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+            File.WriteAllText(path, json);
+        }
         public void DoUWantCreateNewUser()
         {
             ApplicationStatus Status = ApplicationStatus.Sent;
@@ -41,16 +64,7 @@ namespace Managmant
         {
             int res = 0;
             string path = Path.Combine(AppContext.BaseDirectory, "users.json");
-            if (!File.Exists(path) || new FileInfo(path).Length == 0)
-            {
-                allUsers = new List<Application>();
-            }
-            else
-            {
-                string json = File.ReadAllText(path);
-                allUsers = JsonSerializer.Deserialize<List<Application>>(json)
-                           ?? new List<Application>();
-            }
+            LoadFromJson();
             if (allUsers == null || allUsers.Count == 0)
             {
                 id = 1;
@@ -71,12 +85,13 @@ namespace Managmant
             Application newuser = new Application(id, CompanyName, Position, ApplicationDate, Status, Notes);
             allUsers?.Add(newuser);
 
-            string newJson = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
+            // string newJson = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
+            // {
+            //     WriteIndented = true
+            // });
 
-            File.WriteAllText(path, newJson);
+            // File.WriteAllText(path, newJson);
+            SaveToJson();
             Console.WriteLine("Заявка успешно добавлена.");
             return;
         }

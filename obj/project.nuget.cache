@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Uz5NzYtQ6Vc=",
+  "dgSpecHash": "wpU5nKdNjSA=",
   "success": true,
-  "projectFilePath": "D:\\Programming\\Gitproject json\\Json-program\\project für Ausbildung.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Programming\\Ausbildung Project\\Json-program\\project für Ausbildung.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fr1zyzz\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\Fr1zyzz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\Fr1zyzz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
+    "C:\\Users\\Fr1zyzz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.19\\microsoft.netcore.app.host.win-x64.8.0.19.nupkg.sha512"
+  ],
   "logs": []
 }
