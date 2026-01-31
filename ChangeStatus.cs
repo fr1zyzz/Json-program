@@ -9,22 +9,24 @@ namespace Applicationstatus
     {
         public void ChangeIt()
         {
-            int res = 0;
             ApplicationManagment managment = new ApplicationManagment();
             managment.LoadFromJson();
             SearchForName search = new SearchForName();
-            search.Search();
+
+            if (!search.Search())
+            {
+                return;
+            }
             Console.Write("Geben Sie die ID des Antrags ein, dessen Status Sie ändern möchten. \nSie haben eingegeben: ");
             Int32.TryParse(Console.ReadLine(), out int a);
             for(int i = 0; i < managment.allUsers?.Count; i++)
             {
                 if(managment.allUsers[i].Id == a)
                 {
-                    res = i;
-                    Status(a, res);
+                    Status(a);
                 }
             }
-        void Status(int a, int res)
+        void Status(int a)
             {
                 a--;
                 Array status = Enum.GetValues(typeof(ApplicationStatus));
