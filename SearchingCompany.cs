@@ -11,7 +11,7 @@ namespace Searching
         ApplicationManagment managment = new ApplicationManagment();
         public void Search()
         {   
-            Console.Write("Для поиска компании по ее названии, \nвведите название компании:");
+            Console.Write("Um ein Unternehmen nach seinem Namen zu suchen, \ngeben Sie den Namen des Unternehmens ein: ");
             string? res = Console.ReadLine()!.ToLowerInvariant();
             Searching(res);
         }
@@ -22,27 +22,27 @@ namespace Searching
             {
                 if (managment.allUsers[i].CompanyName.ToLowerInvariant().Contains(res))
                 {
-                    Console.WriteLine($"Вот заявка которая была найдена по вашему запросу: \nId: {managment.allUsers?[i].Id}\nCompany Name: {managment.allUsers?[i].CompanyName}\nPosition: {managment.allUsers?[i].Position}\nApplicationDate: {managment.allUsers?[i].ApplicationDate}\nStatus: {managment.allUsers?[i].Status}\nNotes: {managment.allUsers?[i].Notes}");
+                    Console.WriteLine($"Hier ist der Antrag, der auf Ihre Anfrage hin gefunden wurde: \nId: {managment.allUsers?[i].Id}\nCompany Name: {managment.allUsers?[i].CompanyName}\nPosition: {managment.allUsers?[i].Position}\nApplicationDate: {managment.allUsers?[i].ApplicationDate}\nStatus: {managment.allUsers?[i].Status}\nNotes: {managment.allUsers?[i].Notes}");
                     ifNotTrue = i + 1;
                     Check(res);
                     return;
                 }
             }
-            Console.WriteLine("Ничего не было найдено");
+            Console.WriteLine("Nichts wurde gefunden");
             return;
         }
         public void Check(string res)
         {
-            Console.WriteLine("Если ваша заявка была найдена не правильно нажмите <1>, если была найдена правильно нажмите <0>");
+            Console.WriteLine("Wenn Ihr Antrag falsch gefunden wurde, drücken Sie <1>, wenn er korrekt gefunden wurde, drücken Sie <0>");
             Int32.TryParse(Console.ReadLine(), out int a);
             switch (a)
             {
                 case 1:
-                    Console.WriteLine("Поиск будет проведен заново.");
+                    Console.WriteLine("Die Suche wird erneut durchgeführt.");
                     Searching(res);
                     break;
                 case 0:
-                    Console.WriteLine("Спасибо что помогаете становится лучше!");
+                    Console.WriteLine("Vielen Dank, dass Sie helfen, besser zu werden!");
                     ifNotTrue = 0;
                     break;
             }

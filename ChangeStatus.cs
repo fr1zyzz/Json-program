@@ -14,7 +14,7 @@ namespace Applicationstatus
             managment.LoadFromJson();
             SearchForName search = new SearchForName();
             search.Search();
-            Console.Write("Введите Id заявки, у которой вы хотите поменять статус. \n Вы ввели: ");
+            Console.Write("Geben Sie die ID des Antrags ein, dessen Status Sie ändern möchten. \nSie haben eingegeben: ");
             Int32.TryParse(Console.ReadLine(), out int a);
             for(int i = 0; i < managment.allUsers?.Count; i++)
             {
@@ -28,38 +28,38 @@ namespace Applicationstatus
             {
                 a--;
                 Array status = Enum.GetValues(typeof(ApplicationStatus));
-                Console.WriteLine("Вы нашли заявку по айди, какой статус вы хотите ей поставить?");
-                Console.WriteLine("Доступны такие статусы:");
+                Console.WriteLine("Sie haben den Antrag nach der ID gefunden, welchen Status möchten Sie ihm zuweisen?");
+                Console.WriteLine("Folgende Stati sind verfügbar:");
                 for(int i = 0; i < status.Length; i++)
                 {
                     Console.WriteLine($"{i + 1}. {(ApplicationStatus)status.GetValue(i)!}");
                 }
-                Console.WriteLine("0. Завершить программу без изменений.");
-                Console.Write("Вы выбираете(цифру): ");
+                Console.WriteLine("Programm ohne Änderungen beenden.");
+                Console.Write("Sie wählen (Zahl): ");
                 Int32.TryParse(Console.ReadLine(), out int b);
                 switch (b)
                 {
                     case 1:
                     managment.allUsers[a].Status = (ApplicationStatus)status.GetValue(0)!;
-                    Console.WriteLine("Статус успешно изменен!");
+                    Console.WriteLine("Der Status wurde erfolgreich geändert!");
                     break;
                     case 2:
                     managment.allUsers[a].Status = (ApplicationStatus)status.GetValue(1)!;
-                    Console.WriteLine("Статус успешно изменен!");
+                    Console.WriteLine("Der Status wurde erfolgreich geändert!");
                     break;
                     case 3:
                     managment.allUsers[a].Status = (ApplicationStatus)status.GetValue(2)!;
-                    Console.WriteLine("Статус успешно изменен!");
+                    Console.WriteLine("Der Status wurde erfolgreich geändert!");
                     break;
                     case 4:
                     managment.allUsers[a].Status = (ApplicationStatus)status.GetValue(3)!;
-                    Console.WriteLine("Статус успешно изменен!");
+                    Console.WriteLine("Der Status wurde erfolgreich geändert!");
                     break;
                     case 0:
-                    Console.WriteLine("Вы завершили программу без изменений.");
+                    Console.WriteLine("Sie haben das Programm ohne Änderungen beendet.");
                     break;
                     default:
-                    Console.WriteLine("Вы ввели неверное значение");
+                    Console.WriteLine("Sie haben einen ungültigen Wert eingegeben");
                     break;
                 }
                 managment.SaveToJson();

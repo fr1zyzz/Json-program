@@ -18,16 +18,8 @@
   {
     "Id": 3,
     "CompanyName": "Lidl",
-    "Position": "Verkaufer",
+    "Position": "Verkäufer",
     "ApplicationDate": "2026-01-29T10:17:34.170119+01:00",
-    "Status": 0,
-    "Notes": "Keine"
-  },
-  {
-    "Id": 4,
-    "CompanyName": "Penny",
-    "Position": "Verkaufer",
-    "ApplicationDate": "2026-01-29T17:08:21.5299112+01:00",
     "Status": 0,
     "Notes": "Keine"
   },
@@ -37,6 +29,14 @@
     "Position": "Fachinformaticker",
     "ApplicationDate": "2026-01-30T00:14:19.8995685+01:00",
     "Status": 2,
+    "Notes": "Keine"
+  },
+  {
+    "Id": 6,
+    "CompanyName": "Kaufland",
+    "Position": "Verkäufer",
+    "ApplicationDate": "2026-01-31T10:33:54.7045877+01:00",
+    "Status": 0,
     "Notes": "Keine"
   }
 ]

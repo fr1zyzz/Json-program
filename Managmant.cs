@@ -23,7 +23,6 @@ namespace Managmant
             allUsers = JsonSerializer.Deserialize<List<Application>>(json) ?? new List<Application>();
         }
 
-        // метод для сохранения списка обратно в JSON
         public void SaveToJson()
         {
             string json = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
@@ -35,25 +34,25 @@ namespace Managmant
         public void DoUWantCreateNewUser()
         {
             ApplicationStatus Status = ApplicationStatus.Sent;
-            Console.Write("Чтобы начать заполнение заявки введите имя компании в которой вы работаете: ");
+            Console.Write("Um mit dem Ausfüllen des Antrags zu beginnen, geben Sie den Namen des Unternehmens ein, in dem Sie arbeiten: ");
             string? CompanyName = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(CompanyName))
             {
-                Console.Write("Вы ввели неправильное значение");
+                Console.Write("Sie haben einen ungültigen Wert eingegeben.");
                 return;
             }
-            Console.Write("Напишите позицию на которой вы работаете: ");
+            Console.Write("Schreiben Sie die Position, in der Sie arbeiten: ");
             string? Position = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(Position))
             {
-                Console.Write("Вы ввели неправильное значение");
+                Console.Write("Sie haben einen ungültigen Wert eingegeben.");
                 return;
             }
-            Console.Write("Напишите информацию, которую вы хотите, чтобы мы обработали: ");
+            Console.Write("Schreiben Sie die Informationen, die Sie möchten, dass wir verarbeiten: ");
             string? Notes = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(Notes))
             {
-                Console.Write("Вы ввели неправильное значение");
+                Console.Write("Sie haben einen ungültigen Wert eingegeben.");
                 return;
             }
 
@@ -85,7 +84,7 @@ namespace Managmant
             Application newuser = new Application(id, CompanyName, Position, ApplicationDate, Status, Notes);
             allUsers?.Add(newuser);
             SaveToJson();
-            Console.WriteLine("Заявка успешно добавлена.");
+            Console.WriteLine("Der Antrag wurde erfolgreich hinzugefügt.");
             return;
         }
     }

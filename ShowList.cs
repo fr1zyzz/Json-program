@@ -10,12 +10,12 @@ namespace SecondFunction
             string path = Path.Combine(AppContext.BaseDirectory, "users.json");
             if (!File.Exists(path) || new FileInfo(path).Length == 0)
             {
-                Console.WriteLine("Список является пустым.");
+                Console.WriteLine("Die Liste ist leer.");
                 return;
             }
 
             string json = File.ReadAllText(path);
-            Console.WriteLine($"Вот полный список: \n{json}");
+            Console.WriteLine("Hier ist die vollständige Liste: \n{json}");
             
         }
     }

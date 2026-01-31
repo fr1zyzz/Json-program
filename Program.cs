@@ -1,8 +1,10 @@
-﻿using Managmant;
+using System.Text;
+using System.Globalization;
+using Managmant;
 using SecondFunction; 
 using Searching;
 using Applicationstatus;
-using System.Runtime.InteropServices.Marshalling;
+using Deleting;
 
 namespace MainMenu
 {
@@ -10,13 +12,20 @@ namespace MainMenu
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding  = Encoding.UTF8;
+
+            var culture = new CultureInfo("de-DE");
+            Thread.CurrentThread.CurrentCulture   = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
+
             Show();
         }
 
         public static void Show()
         {
             List<UserDate.Application> AllUsers = new List<UserDate.Application>();
-            Console.Write("1. Добавить новую заявку \n2. Показать все заявки \n3. Найти заявку по компании \n4. Изменить статус заявки \n5. Удалить заявку \n0. Завершить программу \nВы ввели: ");
+            Console.Write("1. Neuen Antrag hinzufügen \n2. Alle Anträge anzeigen \n3. Antrag nach Unternehmen finden \n4. Status des Antrags ändern \n5. Antrag löschen \n0. Programm beenden \nSie haben eingegeben: ");
             if(Int32.TryParse(Console.ReadLine(), out int abeme))
             {
                 if(abeme <= 6 && abeme > 0 || abeme == 0)
@@ -40,22 +49,23 @@ namespace MainMenu
                         status.ChangeIt();
                         break;
                         case 5: 
-                        Console.WriteLine("Вы выбрали пункт 5.");
+                        Remove delete = new Remove();
+                        delete.RemoveFromList();
                         break;
                         default:
-                        Console.WriteLine("Вы завершили программу.");
+                        Console.WriteLine("Sie haben das Program beendet.");
                         break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Вы ввели значение выше/ниже доступного.");
+                    Console.WriteLine("Sie haben einen Wert eingegeben, der außerhalb des zulässigen Bereichs liegt.");
                     Show();
                 }
             }
             else
             {
-                Console.WriteLine("Вы ввели неверное значение.");
+                Console.WriteLine("Sie haben einen ungültigen Wert eingegeben.");
                 Show();
             }
         }
