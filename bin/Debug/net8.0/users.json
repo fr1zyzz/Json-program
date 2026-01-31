@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "Id": 1,
     "CompanyName": "Netto",
@@ -12,13 +12,13 @@
     "CompanyName": "AOK",
     "Position": "Praktikum",
     "ApplicationDate": "2026-01-28T08:36:29.1997675+01:00",
-    "Status": 3,
+    "Status": 1,
     "Notes": "ich suche eine Ausbildung"
   },
   {
     "Id": 3,
     "CompanyName": "Lidl",
-    "Position": "Verkäufer",
+    "Position": "Manager",
     "ApplicationDate": "2026-01-29T10:17:34.170119+01:00",
     "Status": 0,
     "Notes": "Keine"
@@ -34,8 +34,24 @@
   {
     "Id": 6,
     "CompanyName": "Kaufland",
-    "Position": "Verkäufer",
+    "Position": "Manager",
     "ApplicationDate": "2026-01-31T10:33:54.7045877+01:00",
+    "Status": 0,
+    "Notes": "Keine"
+  },
+  {
+    "Id": 7,
+    "CompanyName": "Fressnapf",
+    "Position": "Verkäufer",
+    "ApplicationDate": "2026-01-31T17:37:45.3929083+01:00",
+    "Status": 0,
+    "Notes": "Keine"
+  },
+  {
+    "Id": 8,
+    "CompanyName": "Lotto",
+    "Position": "Verkäufer",
+    "ApplicationDate": "2026-01-31T17:39:52.2609123+01:00",
     "Status": 0,
     "Notes": "Keine"
   }

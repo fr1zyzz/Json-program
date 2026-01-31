@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programming\\Ausbildung Project\\Json-program\\project für Ausbildung.csproj": {}
+    "D:\\Programming\\Gitproject json\\Json-program\\project für Ausbildung.csproj": {}
   },
   "projects": {
-    "C:\\Programming\\Ausbildung Project\\Json-program\\project für Ausbildung.csproj": {
+    "D:\\Programming\\Gitproject json\\Json-program\\project für Ausbildung.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programming\\Ausbildung Project\\Json-program\\project für Ausbildung.csproj",
+        "projectUniqueName": "D:\\Programming\\Gitproject json\\Json-program\\project für Ausbildung.csproj",
         "projectName": "project für Ausbildung",
-        "projectPath": "C:\\Programming\\Ausbildung Project\\Json-program\\project für Ausbildung.csproj",
-        "packagesPath": "C:\\Users\\Fr1zyzz\\.nuget\\packages\\",
-        "outputPath": "C:\\Programming\\Ausbildung Project\\Json-program\\obj\\",
+        "projectPath": "D:\\Programming\\Gitproject json\\Json-program\\project für Ausbildung.csproj",
+        "packagesPath": "C:\\Users\\stasn\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming\\Gitproject json\\Json-program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Fr1zyzz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\stasn\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -54,30 +54,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

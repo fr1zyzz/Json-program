@@ -1,4 +1,4 @@
-using Managmant;
+using System.Text;
 
 namespace SecondFunction
 
@@ -14,8 +14,8 @@ namespace SecondFunction
                 return;
             }
 
-            string json = File.ReadAllText(path);
-            Console.WriteLine("Hier ist die vollständige Liste: \n{json}");
+            string json = File.ReadAllText(path, Encoding.UTF8);
+            Console.WriteLine($"Hier ist die vollständige Liste: \n{json}");
             
         }
     }

@@ -1,6 +1,7 @@
 using System.Text.Json;
 using UserDate;
-
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace Managmant
 {
@@ -19,7 +20,7 @@ namespace Managmant
                 return;
             }
 
-            string json = File.ReadAllText(path);
+            string json = File.ReadAllText(path, Encoding.UTF8);
             allUsers = JsonSerializer.Deserialize<List<Application>>(json) ?? new List<Application>();
         }
 
@@ -27,9 +28,10 @@ namespace Managmant
         {
             string json = JsonSerializer.Serialize(allUsers, new JsonSerializerOptions
             {
-                WriteIndented = true
+                WriteIndented = true,
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
             });
-            File.WriteAllText(path, json);
+            File.WriteAllText(path, json, Encoding.UTF8);
         }
         public void DoUWantCreateNewUser()
         {
